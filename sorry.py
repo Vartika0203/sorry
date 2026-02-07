@@ -1,3 +1,8 @@
+import streamlit as st
+
+st.set_page_config(page_title="I'm Sorry", layout="centered")
+
+html_code = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,7 +79,7 @@
     <p>Dekh iss baar jyada kuch bolunga nhi boht roothna manana hua hai dono ke baare mai, abbse i swear gussa ka "g" bhi nhi aane dunga aur agar galti se aaya to tu jo punishment degi wo chalega .<br>iss baar maan jaaa plzz vartikaaa ?</p>
 
     <button id="yes">Maan gayyiii ❤️</button>
-    <button id="no">No 😤</button>
+    <button id="no">Nahiii 😤</button>
 
     <div class="message" id="msg">Im telling ki u wont regret this , get ready to see me without gussaaaa , baki yk u matter to me the most , ye gussa vussa sab temporary hota hai, our friendship is permanent!!! 💕</div>
 </div>
@@ -84,7 +89,6 @@ const noBtn = document.getElementById('no');
 const yesBtn = document.getElementById('yes');
 const msg = document.getElementById('msg');
 
-// Make the "No" button run away
 noBtn.addEventListener('mouseover', () => {
     const x = Math.random() * (window.innerWidth - 100);
     const y = Math.random() * (window.innerHeight - 50);
@@ -93,7 +97,6 @@ noBtn.addEventListener('mouseover', () => {
     noBtn.style.top = y + "px";
 });
 
-// When forgiven
 yesBtn.addEventListener('click', () => {
     msg.style.display = "block";
 });
@@ -101,3 +104,6 @@ yesBtn.addEventListener('click', () => {
 
 </body>
 </html>
+"""
+
+st.markdown(html_code, unsafe_allow_html=True)
